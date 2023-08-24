@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tokomegawarecom/Home.dart';
+import 'package:tokomegawarecom/beatifulchatgpt.dart';
+import 'package:tokomegawarecom/reuseablewidgets/Viewproduct.dart';
 
 void main() {
   runApp(const MyApp());
