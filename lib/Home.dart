@@ -110,7 +110,7 @@ class _EcomHomeState extends State<EcomHome> {
             ),
             //for item prefrence means second box
             Container(
-              height: 50,
+              height: 55,
               width: 390,
               color: Colors.white,
               child: SingleChildScrollView(
@@ -147,28 +147,16 @@ class _EcomHomeState extends State<EcomHome> {
                     //SELF MADE chips
 
                     Container(
-                        width: 120,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                blurRadius: 5,
-                                spreadRadius: 1,
-                                //offset: Offset(1, 1),
-                                color: Color.fromARGB(255, 0, 1, 6)
-                                    .withOpacity(0.5)),
-                          ],
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Container(
-                              width: 30,
-                              height: 30,
+                      width: MediaQuery.of(context).size.width,
+                      height: 40,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.fromLTRB(8, 1, 8, 0),
+                            child: Container(
+                              width: 120,
+                              height: 40,
                               decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10.0)),
@@ -182,466 +170,49 @@ class _EcomHomeState extends State<EcomHome> {
                                           .withOpacity(0.5)),
                                 ],
                               ),
-                              child: Image.asset(
-                                'assets/headset.jpg',
-                                fit: BoxFit.fitHeight,
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Container(
+                                    width: 30,
+                                    height: 30,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10.0)),
+                                      color: Colors.white,
+                                      boxShadow: [
+                                        BoxShadow(
+                                            blurRadius: 5,
+                                            spreadRadius: 1,
+                                            //offset: Offset(1, 1),
+                                            color: Color.fromARGB(255, 0, 1, 6)
+                                                .withOpacity(0.5)),
+                                      ],
+                                    ),
+                                    child: Image.asset(
+                                      'assets/headset.jpg',
+                                      fit: BoxFit.fitHeight,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(
+                                        15, 10, 10, 10),
+                                    child: Text(
+                                      'Headset',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w800),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(15, 10, 10, 10),
-                              child: Text(
-                                'Headset',
-                                style: TextStyle(fontWeight: FontWeight.w800),
-                              ),
-                            ),
-                          ],
-                        )),
-
-                    SizedBox(
-                      width: 15,
+                          );
+                        },
+                        itemCount: 10,
+                      ),
                     ),
-
-                    Container(
-                        width: 120,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                blurRadius: 5,
-                                spreadRadius: 1,
-                                //offset: Offset(1, 1),
-                                color: Color.fromARGB(255, 0, 1, 6)
-                                    .withOpacity(0.5)),
-                          ],
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Container(
-                              width: 30,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 5,
-                                      spreadRadius: 1,
-                                      //offset: Offset(1, 1),
-                                      color: Color.fromARGB(255, 0, 1, 6)
-                                          .withOpacity(0.5)),
-                                ],
-                              ),
-                              child: Image.asset(
-                                'assets/headset.jpg',
-                                fit: BoxFit.fitHeight,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(10, 10, 5, 10),
-                              child: Text(
-                                'Earphones',
-                                style: TextStyle(fontWeight: FontWeight.w800),
-                              ),
-                            ),
-                          ],
-                        )),
-
-                    SizedBox(
-                      width: 15,
-                    ),
-
-                    Container(
-                        width: 120,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                blurRadius: 5,
-                                spreadRadius: 1,
-                                //offset: Offset(1, 1),
-                                color: Color.fromARGB(255, 0, 1, 6)
-                                    .withOpacity(0.5)),
-                          ],
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Container(
-                              width: 30,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 5,
-                                      spreadRadius: 1,
-                                      //offset: Offset(1, 1),
-                                      color: Color.fromARGB(255, 0, 1, 6)
-                                          .withOpacity(0.5)),
-                                ],
-                              ),
-                              child: Image.asset(
-                                'assets/headset.jpg',
-                                fit: BoxFit.fitHeight,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(15, 10, 10, 10),
-                              child: Text(
-                                'Clothes',
-                                style: TextStyle(fontWeight: FontWeight.w800),
-                              ),
-                            ),
-                          ],
-                        )),
-
-                    SizedBox(
-                      width: 15,
-                    ),
-
-                    Container(
-                        width: 120,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                blurRadius: 5,
-                                spreadRadius: 1,
-                                //offset: Offset(1, 1),
-                                color: Color.fromARGB(255, 0, 1, 6)
-                                    .withOpacity(0.5)),
-                          ],
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Container(
-                              width: 30,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 5,
-                                      spreadRadius: 1,
-                                      //offset: Offset(1, 1),
-                                      color: Color.fromARGB(255, 0, 1, 6)
-                                          .withOpacity(0.5)),
-                                ],
-                              ),
-                              child: Image.asset(
-                                'assets/headset.jpg',
-                                fit: BoxFit.fitHeight,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(15, 10, 10, 10),
-                              child: Text(
-                                'Food',
-                                style: TextStyle(fontWeight: FontWeight.w800),
-                              ),
-                            ),
-                          ],
-                        )),
-
-                    SizedBox(
-                      width: 15,
-                    ),
-
-                    Container(
-                        width: 120,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                blurRadius: 5,
-                                spreadRadius: 1,
-                                //offset: Offset(1, 1),
-                                color: Color.fromARGB(255, 0, 1, 6)
-                                    .withOpacity(0.5)),
-                          ],
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Container(
-                              width: 30,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 5,
-                                      spreadRadius: 1,
-                                      //offset: Offset(1, 1),
-                                      color: Color.fromARGB(255, 0, 1, 6)
-                                          .withOpacity(0.5)),
-                                ],
-                              ),
-                              child: Image.asset(
-                                'assets/headset.jpg',
-                                fit: BoxFit.fitHeight,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(15, 10, 10, 10),
-                              child: Text(
-                                'Laptop',
-                                style: TextStyle(fontWeight: FontWeight.w800),
-                              ),
-                            ),
-                          ],
-                        )),
-
-                    SizedBox(
-                      width: 15,
-                    ),
-
-                    Container(
-                        width: 120,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                blurRadius: 5,
-                                spreadRadius: 1,
-                                //offset: Offset(1, 1),
-                                color: Color.fromARGB(255, 0, 1, 6)
-                                    .withOpacity(0.5)),
-                          ],
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Container(
-                              width: 30,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 5,
-                                      spreadRadius: 1,
-                                      //offset: Offset(1, 1),
-                                      color: Color.fromARGB(255, 0, 1, 6)
-                                          .withOpacity(0.5)),
-                                ],
-                              ),
-                              child: Image.asset(
-                                'assets/headset.jpg',
-                                fit: BoxFit.fitHeight,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(15, 10, 10, 10),
-                              child: Text(
-                                'Books',
-                                style: TextStyle(fontWeight: FontWeight.w800),
-                              ),
-                            ),
-                          ],
-                        )),
-
-                    SizedBox(
-                      width: 15,
-                    ),
-
-                    Container(
-                        width: 120,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                blurRadius: 5,
-                                spreadRadius: 1,
-                                //offset: Offset(1, 1),
-                                color: Color.fromARGB(255, 0, 1, 6)
-                                    .withOpacity(0.5)),
-                          ],
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Container(
-                              width: 30,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 5,
-                                      spreadRadius: 1,
-                                      //offset: Offset(1, 1),
-                                      color: Color.fromARGB(255, 0, 1, 6)
-                                          .withOpacity(0.5)),
-                                ],
-                              ),
-                              child: Image.asset(
-                                'assets/headset.jpg',
-                                fit: BoxFit.fitHeight,
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.fromLTRB(15, 10, 10, 10),
-                              child: Text(
-                                'Shoes',
-                                style: TextStyle(fontWeight: FontWeight.w800),
-                              ),
-                            ),
-                          ],
-                        )),
-
-                    SizedBox(
-                      width: 15,
-                    ),
-
-                    Container(
-                        width: 120,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                blurRadius: 5,
-                                spreadRadius: 1,
-                                //offset: Offset(1, 1),
-                                color: Color.fromARGB(255, 0, 1, 6)
-                                    .withOpacity(0.5)),
-                          ],
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Container(
-                              width: 30,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 5,
-                                      spreadRadius: 1,
-                                      //offset: Offset(1, 1),
-                                      color: Color.fromARGB(255, 0, 1, 6)
-                                          .withOpacity(0.5)),
-                                ],
-                              ),
-                              child: Image.asset(
-                                'assets/headset.jpg',
-                                fit: BoxFit.fitHeight,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(15, 10, 5, 10),
-                              child: Text(
-                                'Facewash',
-                                style: TextStyle(fontWeight: FontWeight.w800),
-                              ),
-                            ),
-                          ],
-                        )),
-
-                    SizedBox(
-                      width: 15,
-                    ),
-
-                    Container(
-                        width: 120,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                                blurRadius: 5,
-                                spreadRadius: 1,
-                                //offset: Offset(1, 1),
-                                color: Color.fromARGB(255, 0, 1, 6)
-                                    .withOpacity(0.5)),
-                          ],
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Container(
-                              width: 30,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0)),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                      blurRadius: 5,
-                                      spreadRadius: 1,
-                                      //offset: Offset(1, 1),
-                                      color: Color.fromARGB(255, 0, 1, 6)
-                                          .withOpacity(0.5)),
-                                ],
-                              ),
-                              child: Image.asset(
-                                'assets/headset.jpg',
-                                fit: BoxFit.fitHeight,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(15, 10, 5, 10),
-                              child: Text(
-                                'Keyboard',
-                                style: TextStyle(fontWeight: FontWeight.w800),
-                              ),
-                            ),
-                          ],
-                        )),
 
                     SizedBox(
                       width: 15,
@@ -673,7 +244,7 @@ class _EcomHomeState extends State<EcomHome> {
                           height: 5,
                         ),*/
                         Container(
-                          color: Colors.blue,
+                          color: const Color.fromARGB(255, 255, 255, 255),
                           height: 50,
                           width: 395,
                           child: Row(
@@ -682,20 +253,44 @@ class _EcomHomeState extends State<EcomHome> {
                                 width: 10,
                               ),
                               Text(
-                                'Hot sales',
+                                'Hot Sales',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w800,
+                                  fontSize: 13.5,
+                                ),
                               ),
                               SizedBox(
-                                width: 50,
+                                width: 250,
                               ),
-                              Text('See all')
+                              Text(
+                                'See all',
+                                style: TextStyle(
+                                    fontSize: 13.5,
+                                    fontWeight: FontWeight.w500,
+                                    color: const Color.fromARGB(
+                                        255, 135, 233, 138)),
+                              )
                             ],
                           ),
                         ),
                         Container(
-                          height: 100,
-                          width: 50,
-                          color: Colors.black,
-                        )
+                            height: 200,
+                            width: 412,
+                            color: Colors.black,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                    height: 50,
+                                    width: 50,
+                                    color: Colors.blueAccent,
+                                  ),
+                                );
+                              },
+                              itemCount: 10,
+                            ))
                       ],
                     ),
                   );
