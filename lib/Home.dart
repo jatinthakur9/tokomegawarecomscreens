@@ -192,7 +192,7 @@ class _EcomHomeState extends State<EcomHome> {
                                       ],
                                     ),
                                     child: Image.asset(
-                                      'assets/headset.jpg',
+                                      'assets/headsetcroped.jpg',
                                       fit: BoxFit.fitHeight,
                                     ),
                                   ),
@@ -237,7 +237,7 @@ class _EcomHomeState extends State<EcomHome> {
                   return Container(
                     height: 300,
                     width: 405,
-                    color: Color.fromARGB(255, 147, 96, 46),
+                    color: Color.fromARGB(255, 255, 254, 254),
                     child: Column(
                       children: [
                         /*SizedBox(
@@ -274,20 +274,18 @@ class _EcomHomeState extends State<EcomHome> {
                           ),
                         ),
                         Container(
-                            height: 200,
+                            height: 230,
                             width: 412,
-                            color: Colors.black,
+                            color: const Color.fromARGB(255, 255, 255, 255),
                             child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (context, index) {
                                 return Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    height: 50,
-                                    width: 50,
-                                    color: Colors.blueAccent,
-                                  ),
-                                );
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: ecomcont(
+                                        proimage: 'assets/headsetcroped.jpg',
+                                        ProductCost: '500',
+                                        ProductName: 'Machbook Air M1'));
                               },
                               itemCount: 10,
                             ))
@@ -304,34 +302,3 @@ class _EcomHomeState extends State<EcomHome> {
     );
   }
 }
-
-/*   Container(
-              height: 200,
-              width: 412,
-              color: Color.fromARGB(255, 10, 174, 26),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text('Hot Sales'),
-                      SizedBox(
-                        width: 295,
-                      ),
-                      Text('See all'),
-                    ],
-                  ),
-                  Container(
-                    child: GridView.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 10,
-                      ),
-                      itemBuilder: (context, index) {
-                        return ecomcont();
-                      },
-                    ),
-                  ),
-                ],
-              )),*/
