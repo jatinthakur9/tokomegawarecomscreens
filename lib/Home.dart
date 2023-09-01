@@ -9,6 +9,8 @@ class EcomHome extends StatefulWidget {
 }
 
 class _EcomHomeState extends State<EcomHome> {
+  int a = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -148,15 +150,15 @@ class _EcomHomeState extends State<EcomHome> {
 
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      height: 40,
+                      height: 55,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
                           return Padding(
-                            padding: const EdgeInsets.fromLTRB(8, 1, 8, 0),
+                            padding: const EdgeInsets.fromLTRB(8, 8, 8, 4),
                             child: Container(
                               width: 120,
-                              height: 40,
+                              height: 10,
                               decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10.0)),
@@ -276,7 +278,7 @@ class _EcomHomeState extends State<EcomHome> {
                         Container(
                             height: 230,
                             width: 412,
-                            color: const Color.fromARGB(255, 255, 255, 255),
+                            color: Color.fromARGB(255, 255, 255, 255),
                             child: ListView.builder(
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (context, index) {

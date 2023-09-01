@@ -7,8 +7,8 @@ Container ecomcont({
 }) {
   return Container(
     width: 210,
-    height: 200,
-    color: Color.fromARGB(255, 123, 28, 28),
+    height: 230,
+    color: Color.fromARGB(255, 255, 255, 255),
     child: Column(
       children: [
         Container(
@@ -50,7 +50,23 @@ Container ecomcont({
               ),
             ),
           ],
-        )
+        ),
+        Text(
+          'The inituieive and intelligent  is the ',
+          style: TextStyle(
+            fontSize: 12,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+          child: Text(
+            'WH-1000XM4 Headphone are the best headphone in today world of rnoise cancelaatuon',
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              fontSize: 12,
+            ),
+          ),
+        ),
       ],
     ),
   );
